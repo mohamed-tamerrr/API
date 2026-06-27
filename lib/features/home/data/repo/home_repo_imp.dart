@@ -9,6 +9,7 @@ class HomeRepoImp implements HomeRepo {
 
   HomeRepoImp({required this.apiService});
 
+  /// Get
   @override
   Future<Either<Failure, List<ProductModel>>>
   getProducts() async {
@@ -26,6 +27,7 @@ class HomeRepoImp implements HomeRepo {
     }
   }
 
+  /// Post
   @override
   Future<Either<Failure, ProductFromPost>> postProducts() async {
     try {
@@ -44,6 +46,7 @@ class HomeRepoImp implements HomeRepo {
     }
   }
 
+  /// Put = Updata
   @override
   Future<Either<Failure, ProductFromPost>>
   updateProduct() async {
@@ -63,6 +66,7 @@ class HomeRepoImp implements HomeRepo {
     }
   }
 
+  /// Delete
   @override
   Future<Either<Failure, void>> deleteProduct(int id) async {
     try {

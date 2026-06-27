@@ -24,6 +24,7 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
+  /// Post
   Future<void> postProducts() async {
     emit(HomeLoading());
     final response = await homeRepo.postProducts();
@@ -34,6 +35,7 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
+  /// Put = Update
   Future<void> updateProduct({
     required int id,
     required String title,
@@ -46,6 +48,7 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
+  /// Delete
   Future<void> deleteProduct(int id) async {
     final response = await homeRepo.deleteProduct(id);
 
